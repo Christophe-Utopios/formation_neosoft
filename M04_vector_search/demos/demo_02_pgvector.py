@@ -2,11 +2,9 @@ from __future__ import annotations
 
 import time
 import psycopg
-import numpy as np
 from pgvector.psycopg import register_vector
 from sentence_transformers import SentenceTransformer
 from rich.console import Console
-from rich.table import Table
 
 from _corpus import get_corpus
 
