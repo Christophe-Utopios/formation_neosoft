@@ -62,6 +62,64 @@ def main() :
     client.upsert(collection_name=COLLECTION, points=points, wait=True)
 
     console.print(f"{len(points)} chunks indexés\n")
+    
+    # 4. recherche
+    
+    queries = [
+        "Comment configurer SAML pour l'authentification ?",
+        "Erreur 50. sur les rapports",
+        "Politique de conversation des sauvegardes"
+    ]
+    
+    for q in queries:
+        console.print(f"Requête : {q}")
+        
+        query_emb = model.encode(f"query: {q}", normalize_embeddings=True)
+        
+        response = client.query_points(
+            collection_name=COLLECTION,
+            query= query_emb.tolist(),
+            limit=5,
+            with_payload=True
+        )
+        
+        results = response.points
+        
+        table = Table(show_lines=False, expand=True)
+        table.add_column("Score", justify="right", width=8)
+        table.add_column("Catégorie", width=14)
+        table.add_column("Titre", width=30)
+        table.add_column("Extrait", overflow="fold")
+        for hit in results:
+            content = hit.payload["content"]
+            table.add_row(
+                f"{hit.score}",
+                hit.payload["category"],
+                hit.payload["title"],
+                content[:80] + "..." if len(content) > 80 else content
+            )
+            
+        console.print(table)
+        
+        # Recherche avec filtre - le filtre est appliqué avant la recherche
+        console.print("recherche par filtre")
+        q = "Comment se connecter en SSO ?"
+        query_emb = model.encode(f"query: {q}", normalize_embeddings=True)
+        
+        response = client.query_points(
+            collection_name=COLLECTION,
+            query=query_emb.tolist(),
+            query_filter=Filter(
+                must=[FieldCondition(key="category", match=MatchValue(value="auth"))]
+            ),
+            limit=5,
+            with_payload=True
+        )
+        
+        results = response.points
+        for hit in results:
+            console.print(f"[{hit.score}] | {hit.payload['title']} ({hit.payload['category']})")
+        
 
 if __name__ == "__main__":
     main()
