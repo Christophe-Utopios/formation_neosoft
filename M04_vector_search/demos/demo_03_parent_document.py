@@ -8,7 +8,7 @@ from rich.console import Console
 from rich.panel import Panel
 
 console = Console()
-COLLECTION = "demo_05_parent_doc"
+COLLECTION = "demo_03_parent_doc"
 MODEL_NAME = "intfloat/multilingual-e5-small"
 
 
