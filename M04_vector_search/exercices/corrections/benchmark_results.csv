@@ -1,0 +1,4 @@
+mode,recall@5,recall@10,mrr,p50_ms,p95_ms,r5_paraphrase,r5_ref_tech,r5_mixte
+dense,0.917,0.917,0.834,43.3,64.4,0.85,0.9,1.0
+sparse,0.867,0.883,0.77,0.1,0.2,0.7,0.9,1.0
+hybrid_rrf,0.9,0.9,0.878,34.0,48.2,0.8,0.9,1.0
