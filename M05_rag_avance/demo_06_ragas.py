@@ -19,6 +19,12 @@ from rich.table import Table
 
 from _setup import get_or_create_index, search_dense
 
+import sys
+from types import ModuleType
+fake_vertex = ModuleType("langchain_community.chat_models.vertexai")
+fake_vertex.ChatVertexAI = None 
+sys.modules["langchain_community.chat_models.vertexai"] = fake_vertex
+
 load_dotenv()
 console = Console()
 LLM_MODEL = "claude-haiku-4-5-20251001"
