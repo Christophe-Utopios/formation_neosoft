@@ -8,16 +8,26 @@ Vous allez construire un pipeline RAG complet sur un corpus juridique simplifié
 
 ## Étape 1 — Préparer le corpus (10 min)
 
-À partir du dataset `Nicolas-BZRD/French_Code_Civil` sur Hugging Face (libre d'usage), prendre les **300 premiers articles** :
+À partir du dataset `louisbrulenaudet/code-civil` sur Hugging Face (libre d'usage), prendre **300 articles en vigueur** :
 
 ```python
+import re
 from datasets import load_dataset
-ds = load_dataset("Nicolas-BZRD/French_Code_Civil", split="train", streaming=True)
-articles = list(ds.take(300))
-# Chaque article a : url, content, title, etc.
-```
 
-Si la connexion est bloquée, utiliser le fichier `juris_extract.json` fourni dans le dossier `exercises/` (mêmes données, version locale).
+ds = load_dataset("louisbrulenaudet/code-civil", split="train")
+articles = []
+for row in ds:
+    texte = re.sub(r"\s+", " ", (row.get("texte") or "")).strip()
+    if texte and row.get("etat") == "VIGUEUR":            # ne garder que le droit en vigueur
+        articles.append({
+            "article_id": f"article_{row['num']}",         # ex : "article_414"
+            "content": texte,
+            "ref": row.get("ref"),                         # ex : "Code civil, art. 414"
+        })
+    if len(articles) >= 300:
+        break
+# Champs disponibles : texte, texteHtml, num, ref, etat, dateDebut, ...
+```
 
 Indexer dans Qdrant avec :
 
