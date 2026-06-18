@@ -1,0 +1,15 @@
+{"question": "À partir de quel âge un Français est-il majeur ?", "ground_truth": "La majorité civile en France est fixée à 18 ans selon l'article 388 du Code civil."}
+{"question": "À partir de quand peut-on signer un contrat seul ?", "ground_truth": "Une personne peut contracter dès sa majorité, soit 18 ans, sauf incapacité spécifique."}
+{"question": "Combien de témoins faut-il pour se marier ?", "ground_truth": "Le mariage civil nécessite la présence de 2 à 4 témoins."}
+{"question": "Mon enfant est né, qu'est-ce que je dois faire ?", "ground_truth": "Une déclaration de naissance doit être faite à l'état civil dans les 5 jours suivant la naissance."}
+{"question": "Mon conjoint est décédé, comment partager les biens ?", "ground_truth": "Le partage des biens dépend du régime matrimonial et de la présence d'enfants ; à défaut de testament, la succession suit les règles légales."}
+{"question": "Que prévoit l'article 388 du Code civil ?", "ground_truth": "L'article 388 du Code civil définit le mineur comme l'individu de l'un ou l'autre sexe qui n'a point encore l'âge de dix-huit ans accomplis."}
+{"question": "Définition juridique de l'usufruit ?", "ground_truth": "L'usufruit est le droit de jouir des choses dont un autre a la propriété, à charge d'en conserver la substance."}
+{"question": "Régime de la communauté légale, principe ?", "ground_truth": "À défaut de contrat de mariage, les époux sont soumis au régime de la communauté réduite aux acquêts."}
+{"question": "Quel est le délai de prescription civile de droit commun ?", "ground_truth": "Le délai de prescription extinctive de droit commun est de 5 ans à compter du jour où le titulaire a connu les faits."}
+{"question": "Distinction entre meubles et immeubles ?", "ground_truth": "Les biens sont meubles ou immeubles selon leur nature, leur destination ou leur objet."}
+{"question": "Comment fonctionne la tutelle d'un mineur ?", "ground_truth": "La tutelle est ouverte lorsqu'un mineur est privé de ses parents ; elle est exercée par un tuteur sous la surveillance du conseil de famille et du juge des tutelles."}
+{"question": "Quels sont les droits successoraux du conjoint survivant ?", "ground_truth": "Le conjoint survivant a vocation successorale ; ses droits varient selon la présence d'enfants ou d'autres héritiers, allant de l'usufruit total à la pleine propriété."}
+{"question": "Comment procéder à une adoption simple ?", "ground_truth": "L'adoption simple nécessite une requête au tribunal judiciaire, le consentement des parties, et est prononcée si elle correspond à l'intérêt de l'adopté."}
+{"question": "Quels sont les effets d'un PACS ?", "ground_truth": "Le PACS crée une vie commune, une aide mutuelle, des droits sociaux ; les biens sont en principe séparés sauf indivision déclarée."}
+{"question": "Comment se passe une séparation de corps ?", "ground_truth": "La séparation de corps suit les mêmes règles que le divorce et entraîne le relâchement du lien matrimonial sans le rompre."}
