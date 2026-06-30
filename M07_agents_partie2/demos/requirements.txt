@@ -1,0 +1,16 @@
+anthropic>=0.40.0
+langgraph>=0.2.50
+langgraph-checkpoint-sqlite>=2.0.0
+langchain-anthropic>=0.3.0
+langchain-core>=0.3.78
+langchain-community>=0.3.0
+python-dotenv>=1.0.0
+rich>=13.7.0
+eval_type_backport>=0.2.0
+grandalf>=0.8
+
+# CrewAI : nécessite Python 3.10+ pour les versions récentes (>= 0.80).
+# Pour la démo 06, créer un env Python 3.11 dédié :
+#   pyenv install 3.11.10 && pyenv virtualenv 3.11.10 myenv311 && pyenv activate myenv311
+#   pip install crewai>=0.80
+# crewai>=0.80.0
