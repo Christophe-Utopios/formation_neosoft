@@ -13,4 +13,4 @@ grandalf>=0.8
 # Pour la démo 06, créer un env Python 3.11 dédié :
 #   pyenv install 3.11.10 && pyenv virtualenv 3.11.10 myenv311 && pyenv activate myenv311
 #   pip install crewai>=0.80
-# crewai>=0.80.0
+crewai>=0.80.0
