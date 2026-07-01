@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 # Réutilise le mock RH du M7
-M7_EX = Path(__file__).resolve().parent.parent.parent / "M07_agents_partie2" / "exercises"
+M7_EX = Path(__file__).resolve().parent.parent.parent / "M07_agents_partie2" / "exercices"
 sys.path.insert(0, str(M7_EX))
 import _mock_hr as hr
 
