@@ -1,0 +1,10 @@
+mcp>=1.0.0
+anthropic>=0.40.0
+langgraph>=0.2.50
+langchain-anthropic>=0.3.0
+langchain-core>=0.3.78
+langchain-mcp-adapters>=0.0.5
+pydantic[email]>=2.0.0
+python-dotenv>=1.0.0
+rich>=13.7.0
+eval_type_backport>=0.2.0
